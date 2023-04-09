@@ -40,11 +40,11 @@ A guide on how to run the application in a new environment
 ## Endpoints
 RESTful endpoint for managing user and todos.
 
-### Todo
+### Users
 
 Handles creating and authorising user.
 
-#### GET /users/me
+#### `GET /users/me`
 
 Retrieves the user details of an authenticated user. In order to authenticate, see `POST /users/login`.
 
@@ -60,7 +60,7 @@ Authorization: Bearer ACCESS_TOKEN
 }
 ```
 
-#### POST /users/
+#### `POST /users/`
 
 Creates a new user.
 
@@ -81,7 +81,7 @@ Content-Type: application/json
 }
 ```
 
-#### POST /users/login
+#### `POST /users/login`
 
 Authenticates and authorises user. Inorder to create an account, see `POST /users/`
 
@@ -101,7 +101,7 @@ Content-Type: application/json
 }
 ```
 
-#### POST /users/tokens/refresh
+#### `POST /users/tokens/refresh`
 
 Refreshes access token.
 
@@ -120,7 +120,7 @@ Cookie: "refreshToken=REFRESH_TOKEN"
 
 Handles creating, updating, reading and deleting todos.
 
-#### GET /todos/
+#### `GET /todos/`
 
 Retrieve todos.
 
@@ -149,7 +149,7 @@ Authorization: Bearer ACCESS_TOKEN
 
 ```
 
-#### GET /todos/:id
+#### `GET /todos/:id`
 
 Retrieves a todo.
 
@@ -168,7 +168,7 @@ Authorization: Bearer ACCESS_TOKEN
 }
 ```
 
-#### POST /todos/
+#### `POST /todos/`
 
 Creates a todo.
 
@@ -192,7 +192,7 @@ Content-Type: application/json
 }
 ```
 
-#### PUT /todos/:id
+#### `PUT /todos/:id`
 
 Updates `content` and `completed`.
 
@@ -217,7 +217,7 @@ Content-Type: application/json
 }
 ```
 
-#### DELETE /todos/:id
+#### `DELETE /todos/:id`
 
 Soft deletes a todo.
 
